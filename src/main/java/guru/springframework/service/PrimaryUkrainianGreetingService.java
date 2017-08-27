@@ -7,10 +7,16 @@ import org.springframework.stereotype.Service;
 @Service
 @Primary
 @Profile("ua")
-public class PrimaryUkrainianGreetingService implements GreetingService{
+public class PrimaryUkrainianGreetingService implements GreetingService {
+
+    private GreetingRepository greetingRepository;
+
+    public PrimaryUkrainianGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
 
     @Override
     public String sayGreeting() {
-        return "Привіт від PrimaryGreetingService";
+        return greetingRepository.getUkrainianGreeting();
     }
 }
