@@ -3,3 +3,11 @@ guru:
     username: JMS Username
     password: SomePass
     url: SomeUrl
+
+--- # file separator inside the YAML file
+spring:
+  profiles: ua
+
+guru:
+  jms:
+    username: JMS Username *** in Ukrainian
