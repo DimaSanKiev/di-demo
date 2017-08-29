@@ -4,6 +4,7 @@ import guru.springframework.controller.ConstructorInjectedController;
 import guru.springframework.controller.GetterInjectedController;
 import guru.springframework.controller.MyController;
 import guru.springframework.controller.PropertyInjectedController;
+import guru.springframework.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,11 +14,14 @@ public class DiDemoApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
-        MyController controller = (MyController) ctx.getBean("myController");
 
-        System.out.println(controller.hello());
-        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+//        MyController controller = (MyController) ctx.getBean("myController");
+//        System.out.println(controller.hello());
+//        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+//        System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
+//        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+
+        FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource.getUser());
     }
 }
