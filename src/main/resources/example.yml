@@ -1,0 +1,34 @@
+# this is a comment
+
+name: Dima
+
+names: # inline comment
+  - Dima
+  - John
+  - Diego
+
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: random house
+
+# Booleans:
+truth: yes
+another_truth: True
+more_truth: true
+false: no # No, false, False, FALSE
+
+# Escaping
+string_val: "This is it's quote"
+colon_sting: "my courses: one two three"
+
+# Multiple lines:
+include_new_lines: |
+  sadas asdasd asdsad
+  asdasd asdasd asdasd
+  asdasd asd ad dsad
+ignore_new_lines: >
+  this is
+  just one long
+  string
